@@ -39,8 +39,8 @@ add_action('widgets_init', 'currency_converter_register_widget');
 function currency_converter_enqueue_style()
 {
     $purl = plugins_url('/bootstrap.min.css', __FILE__);
-    wp_register_style('bootstrap-3-style', $purl);
-    wp_enqueue_style('bootstrap-3-style');
+    wp_register_style('bootstrap', $purl);
+    wp_enqueue_style('bootstrap');
 }
 
 add_action('wp_enqueue_scripts', 'currency_converter_enqueue_style');

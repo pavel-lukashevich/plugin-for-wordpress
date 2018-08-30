@@ -103,6 +103,10 @@ class Currency_Converter_Widget extends WP_Widget
      */
     public function form($instance)
     {
+        $instance['select-btn-1'] = (!empty($new_instance['select-btn-1'])) ? $new_instance['select-btn-1'] : $this->button_1;
+        $instance['select-btn-2'] = (!empty($new_instance['select-btn-2'])) ? $new_instance['select-btn-2'] : $this->button_2;
+        $instance['select-btn-3'] = (!empty($new_instance['select-btn-3'])) ? $new_instance['select-btn-3'] : $this->button_3;
+
         echo '<h4>выберите валюту:</h4>';
 
         //выбор кнопки 1
@@ -141,9 +145,9 @@ class Currency_Converter_Widget extends WP_Widget
     {
         $instance = array();
 
-        $instance['select-btn-1'] = (!empty($new_instance['select-btn-1'])) ? $new_instance['select-btn-1'] : $this->button_1;
-        $instance['select-btn-2'] = (!empty($new_instance['select-btn-2'])) ? $new_instance['select-btn-2'] : $this->button_2;
-        $instance['select-btn-3'] = (!empty($new_instance['select-btn-3'])) ? $new_instance['select-btn-3'] : $this->button_3;
+        $instance['select-btn-1'] = (!empty($new_instance['select-btn-1'])) ? $new_instance['select-btn-1'] : $old_instance['select-btn-1'];
+        $instance['select-btn-2'] = (!empty($new_instance['select-btn-2'])) ? $new_instance['select-btn-2'] : $old_instance['select-btn-2'];
+        $instance['select-btn-3'] = (!empty($new_instance['select-btn-3'])) ? $new_instance['select-btn-3'] : $old_instance['select-btn-3'];
 
         return $instance;
     }
